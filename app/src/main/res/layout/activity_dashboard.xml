@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DashboardActivity"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:scaleType="centerCrop"
+        android:fitsSystemWindows="true"
+        app:layout_collapseMode="parallax">
+
+        <TextView
+            android:id="@+id/txtTanggal"
+            android:text="Today, March 05"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/text_temp_max"
+            android:layout_marginLeft="40dp"
+            android:layout_marginStart="40dp"/>
+
+        <TextView
+            android:id="@+id/text_temp_max"
+            android:text="26\u00B0"
+            android:textSize="45sp"
+            android:textColor="@android:color/black"
+            android:layout_above="@+id/text_temp_min"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginStart="40dp"/>
+
+        <TextView
+            android:id="@+id/text_temp_min"
+            android:text="78\u00B0"
+            android:textSize="25sp"
+            android:textColor="@android:color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginStart="40dp"/>
+
+        <ImageView
+            android:id="@+id/image_desc"
+            android:layout_above="@+id/text_desc"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_marginRight="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            app:srcCompat="@android:mipmap/sym_def_app_icon"/>
+
+        <TextView
+            android:id="@+id/text_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="20dp"
+            android:text="Cloudy"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="7dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_view">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>
