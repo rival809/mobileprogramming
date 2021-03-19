@@ -15,29 +15,40 @@
         app:layout_collapseMode="parallax">
 
         <TextView
-            android:id="@+id/txtTanggal"
-            android:text="Today, March 05"
+            android:id="@+id/txtKota"
+            android:text="Bandung"
             android:textColor="@android:color/black"
             android:textSize="14sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/text_temp_max"
+            android:layout_above="@+id/txtTanggal"
             android:layout_marginLeft="40dp"
             android:layout_marginStart="40dp"/>
 
         <TextView
-            android:id="@+id/text_temp_max"
-            android:text="26\u00B0"
+            android:id="@+id/txtTanggal"
+            android:text="Today, Oktober 22"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/text_temp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginStart="40dp"/>
+
+        <TextView
+            android:id="@+id/text_temp"
+            android:text="90\u00B0"
             android:textSize="45sp"
             android:textColor="@android:color/black"
-            android:layout_above="@+id/text_temp_min"
+            android:layout_above="@+id/text_temp_min_max"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
             android:layout_marginStart="40dp"/>
 
         <TextView
-            android:id="@+id/text_temp_min"
+            android:id="@+id/text_temp_min_max"
             android:text="78\u00B0"
             android:textSize="25sp"
             android:textColor="@android:color/black"
@@ -60,16 +71,18 @@
 
         <TextView
             android:id="@+id/text_desc"
+            android:text="light rain"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginRight="30dp"
-            android:layout_marginBottom="20dp"
-            android:text="Cloudy"
             android:textAlignment="center"
-            android:textColor="@android:color/black"
-            android:textSize="16sp" />
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="20dp" />
 
     </RelativeLayout>
 
@@ -84,3 +97,54 @@
     </androidx.recyclerview.widget.RecyclerView>
 
 </LinearLayout>
+
+    <!--<android.support.design.widget.CoordinatorLayout-->
+    <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--tools:context=".HomeActivity"-->
+    <!--android:fitsSystemWindows="true">-->
+
+    <!--<android.support.design.widget.AppBarLayout-->
+    <!--    android:fitsSystemWindows="true"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="wrap_content">-->
+
+    <!--    <android.support.design.widget.CollapsingToolbarLayout-->
+    <!--        app:layout_scrollFlags="exitUntilCollapsed|scroll"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:fitsSystemWindows="true">-->
+
+
+
+    <!--        <android.support.v7.widget.Toolbar-->
+    <!--            android:id="@+id/toolbar_layout"-->
+    <!--            android:background="@color/colorPrimary"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="?android:attr/actionBarSize"-->
+    <!--            app:layout_collapseMode="pin">-->
+
+    <!--            <ImageView-->
+    <!--                android:layout_width="45dp"-->
+    <!--                android:layout_height="45dp"-->
+    <!--                android:src="@drawable/art_clear"/>-->
+    <!--            <TextView-->
+    <!--                android:id="@+id/text_title"-->
+    <!--                android:text="Sunshine"-->
+    <!--                android:paddingLeft="5dp"-->
+    <!--                android:textSize="30sp"-->
+    <!--                android:textColor="@android:color/white"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content" />-->
+
+    <!--        </android.support.v7.widget.Toolbar>-->
+
+    <!--    </android.support.design.widget.CollapsingToolbarLayout>-->
+    <!--</android.support.design.widget.AppBarLayout>-->
+
+
+
+    <!--</android.support.design.widget.CoordinatorLayout>-->

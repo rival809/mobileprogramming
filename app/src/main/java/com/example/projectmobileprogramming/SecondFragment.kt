@@ -1,4 +1,4 @@
-package com.example.testproject
+package com.example.projectmobileprogramming
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -14,8 +14,8 @@ import androidx.navigation.fragment.findNavController
 class SecondFragment : Fragment() {
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater, container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_second, container, false)
