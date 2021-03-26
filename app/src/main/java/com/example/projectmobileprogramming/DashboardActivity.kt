@@ -25,10 +25,11 @@ class DashboardActivity : AppCompatActivity() {
                 Log.d("response", response.body().toString())
 
                 txtKota.text = item?.city?.name
-                txtTanggal.text = item?.list?.get(0)?.dt.toString()
-                text_temp.text = item?.list?.get(0)?.main?.temp.toString()
-                text_temp_min_max.text = item?.list?.get(0)?.main?.tempMin.toString() + " - " +item?.list?.get(0)?.main?.tempMax.toString()
+                txtTanggal.text = item?.list?.get(0)?.dt?.let { Util.getDayName(it) }
+                text_temp.text = item?.list?.get(0)?.main?.temp?.let { Util.setFormatTemperature(it) }
+                text_temp_min_max.text = item?.list?.get(0)?.main?.tempMin?.let { Util.setFormatTemperature(it) } + " - " + item?.list?.get(0)?.main?.tempMax?.let { Util.setFormatTemperature(it) }
                 text_desc.text = item?.list?.get(0)?.weather?.get(0)?.description.toString()
+                item?.list?.get(0)?.weather?.get(0)?.id?.let { Util.getArtResourceForWeatherCondition(it) }?.let { image_desc.setImageResource(it) }
 
                 var list = item?.list
                 var itemAdp = ItemAdapter(list as List<ListItem>)
